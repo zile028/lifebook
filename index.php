@@ -1,5 +1,5 @@
 <?php 
-
+$title = "LifeBook";
 require "core/init.php";
 
 
