@@ -10,7 +10,7 @@
                     <option value="ms">Ms</option>
                 </select><br>
                 <input type="text" name="first_name" placeholder="first_name" class="form-control"
-                    value="<?php if(isset($first_name)) echo $first_name;  ?>"><br>
+                    value="<?php if(isset($first_name))      echo $first_name;  ?>"><br>
                 <?php if(isset($first_name_error)): ?>
                 <p class="text-danger"><?php echo $first_name_error ?></p>
                 <?php endif; ?>
