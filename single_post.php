@@ -3,18 +3,12 @@ $title = "LifeBook";
 require "core/init.php";
 $users=getAllUser();
 $categories=getCategories();
-$id=null;
-$criteria=null;
 
-if(isset($_GET['category'])){
-    $id = $_GET['category'];
-    $criteria="category_id";
-}elseif(isset($_GET['user'])){
-    $id=$_GET['user'];
-    $criteria="user_id";
+
+if(isset($_GET['postid'])){
+    
+    $post=getAllPublicPosts("posts.id",$_GET['postid'])[0];
 }
-
-$posts = getAllPublicPosts($criteria,$id);
 
 // class Human {
 //     public $lastName = "Zivkovic";
@@ -34,4 +28,4 @@ $posts = getAllPublicPosts($criteria,$id);
 
 
 
-require "views/index.view.php";
+require "views/single_post.view.php";
